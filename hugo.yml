@@ -1,0 +1,60 @@
+baseURL: 'https://ziaei.ir'
+locale: 'en-us'
+title: 'Islamic Philosophy'
+theme: 'PaperMod'
+
+# 1. ADD THIS: Set a high summary length so Hugo doesn't truncate early
+summaryLength: 150 
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 2. ADD THIS: Tell Hugo to prioritize your manual summary/split
+frontmatter:
+  summary: ["custom", "firstparagraph"]
+
+params:
+  showFullTextLayout: false 
+  defaultTheme: auto
+  disableThemeToggle: true
+  
+  # Corrected indentation: these are main parameters, not part of fuseOpts
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowBreadCrumbs: true 
+  comments: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+caches:
+  images:
+    dir: ':cacheDir/images'
+
+menu:
+  main:
+    - identifier: about 
+      name: About 
+      url: /about/
+      weight: 1
+    - identifier: blog
+      name: blog 
+      url: /posts
+      weight: 5
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: search 
+      name: search 
+      url: /search
+

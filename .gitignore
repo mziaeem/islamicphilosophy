@@ -1,0 +1,9 @@
+# Hugo default output directory
+public/
+
+# Resources directory (caches compiled assets like Sass/SCSS)
+resources/
+
+# Local server cache
+.hugo_build.lock
+
